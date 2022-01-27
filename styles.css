@@ -19,9 +19,6 @@ header {
     top: 0;
 }
 
-
-/* header content here*/
-
 header p {
     font-size: 18px;
     line-height: 21px;
@@ -43,9 +40,6 @@ header p:first-of-type {
     top: 8px;
 }
 
-
-/* end of header content */
-
 .container-content {
     background-color: #EEEEEE;
     height: 1000px;
@@ -58,4 +52,19 @@ footer {
     max-width: 414px;
     position: fixed;
     bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer button {
+    background-color: #CBCBCB;
+    height: 61px;
+    width: 364px;
+    border-radius: 50px;
+    margin-top: 15px;
+    border-style: none;
+    color: white;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.018em;
 }
