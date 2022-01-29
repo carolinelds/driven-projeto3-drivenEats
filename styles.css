@@ -44,7 +44,7 @@ header p:first-of-type {
 main {
     background-color: #EEEEEE;
     margin-top: 92px;
-    height: calc(842px + 92px);
+    height: calc(842px + 160px);
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -68,7 +68,7 @@ main>p:first-of-type {
     margin-left: 19px;
     margin-top: 17px;
     margin-bottom: 27px;
-    height: 216px;
+    height: auto;
     display: flex;
     width: 100%;
     overflow-x: scroll;
@@ -81,6 +81,44 @@ main>p:first-of-type {
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     margin-right: 16px;
+ 
+}
+
+.container-options > div div {
+    margin-left: 14px;
+}
+
+.container-options img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+.container-options strong {
+    height: 23px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    color: #333333;
+}
+
+.container-options small {
+    height: auto;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+    color: #A6A6A6;
+    
+}
+
+.container-options p {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 21px;
+    color: black;
+    margin-bottom: 12px;
 }
 
 .container-options > div:last-of-type {
