@@ -8,6 +8,8 @@ body {
     max-width: 614px;
     margin: 0 auto;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 header {
@@ -137,8 +139,8 @@ footer {
     justify-content: center;
 }
 
-.order-button {
-    background-color: #CBCBCB;
+.order-button-disabled,
+.order-button-enabled {
     height: 61px;
     width: 364px;
     border-radius: 50px;
@@ -150,16 +152,105 @@ footer {
     letter-spacing: 0.018em;
 }
 
-.order-button.enabled {
+.order-button-disabled {
+    background-color: #CBCBCB;
+}
+
+.order-button-enabled {
     background-color: #32B72F;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .selected {
     box-shadow: inset 0px 0px 0px 5px #32B72F;
 }
 
-.checkmarkOff {
-    display: none;
+.review-screen-container {
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 614px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.review-screen {
+    width: 377px;
+    height: 353px;
+    background-color: #50D074;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-screen > p {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 21px;
+    margin-bottom: 28px;
+}
+
+.review-screen > div {
+    width: 329px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-screen div p {
+    color: white;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    margin-bottom: 13px;
+}
+
+.review-screen > div:last-of-type {
+    font-weight: bold;
+}
+
+.review-screen button:first-of-type {
+    margin-top: 8px;
+    background: #FFFFFF;
+    width: 329px;
+    height: 52px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.review-screen button:first-of-type p{
+    color: #50D074;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+}
+
+.review-screen button:last-of-type {
+    background-color: inherit;
+    border: none;
+}
+
+.review-screen button:last-of-type p {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.018em;
 }
 
 ion-icon {

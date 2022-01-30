@@ -35,7 +35,7 @@
                     <strong data-identifier="food-title">Frango Yin Yang<br></strong>
                     <small>Um pouco de batata, um pouco de salada</small>
                     <p data-identifier="food-price">R$ 14,90</p>
-                    <ion-icon class="checkmarkOff" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="display-none" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
             <div class="food-option" onclick="selectFood(this, '.dishes')" data-identifier="food-option">
@@ -44,7 +44,7 @@
                     <strong data-identifier="food-title">Frango Yin Yang<br></strong>
                     <small>Um pouco de batata, um pouco de salada</small>
                     <p data-identifier="food-price">R$ 14,90</p>
-                    <ion-icon class="checkmarkOff" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="display-none" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
             <div class="food-option" onclick="selectFood(this, '.dishes')" data-identifier="food-option">
@@ -53,7 +53,7 @@
                     <strong data-identifier="food-title">Frango Yin Yang<br></strong>
                     <small>Um pouco de batata, um pouco de salada</small>
                     <p data-identifier="food-price">R$ 14,90</p>
-                    <ion-icon class="checkmarkOff" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="display-none" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
             <div class="food-option" onclick="selectFood(this, '.dishes')" data-identifier="food-option">
@@ -62,7 +62,7 @@
                     <strong data-identifier="food-title">Frango Yin Yang<br></strong>
                     <small>Um pouco de batata, um pouco de salada</small>
                     <p data-identifier="food-price">R$ 14,90</p>
-                    <ion-icon class="checkmarkOff" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="display-none" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
                     <strong data-identifier="food-title">Coquinha gelada<br></strong>
                     <small>Lata 350ml</small>
                     <p data-identifier="food-price">R$ 4,90</p>
-                    <ion-icon class="checkmarkOff" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="display-none" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
             <div class="food-option" onclick="selectFood(this, '.drinks')" data-identifier="food-option">
@@ -83,7 +83,7 @@
                     <strong data-identifier="food-title">Coquinha gelada<br></strong>
                     <small>Lata 350ml</small>
                     <p data-identifier="food-price">R$ 4,90</p>
-                    <ion-icon class="checkmarkOff" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="display-none" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
             <div class="food-option" onclick="selectFood(this, '.drinks')" data-identifier="food-option">
@@ -92,7 +92,7 @@
                     <strong data-identifier="food-title">Coquinha gelada<br></strong>
                     <small>Lata 350ml</small>
                     <p data-identifier="food-price">R$ 4,90</p>
-                    <ion-icon class="checkmarkOff" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="display-none" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
             <div class="food-option" onclick="selectFood(this, '.drinks')" data-identifier="food-option">
@@ -101,7 +101,7 @@
                     <strong data-identifier="food-title">Coquinha gelada<br></strong>
                     <small>Lata 350ml</small>
                     <p data-identifier="food-price">R$ 4,90</p>
-                    <ion-icon class="checkmarkOff" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="display-none" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@
                     <strong data-identifier="food-title">Pudim<br></strong>
                     <small>Apenas pudim</small>
                     <p data-identifier="food-price">R$ 7,90</p>
-                    <ion-icon class="checkmarkOff" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="display-none" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
             <div class="food-option" onclick="selectFood(this, '.desserts')" data-identifier="food-option">
@@ -122,7 +122,7 @@
                     <strong data-identifier="food-title">Pudim<br></strong>
                     <small>Apenas pudim</small>
                     <p data-identifier="food-price">R$ 7,90</p>
-                    <ion-icon class="checkmarkOff" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="display-none" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
             <div class="food-option" onclick="selectFood(this, '.desserts')" data-identifier="food-option">
@@ -131,7 +131,7 @@
                     <strong data-identifier="food-title">Pudim<br></strong>
                     <small>Apenas pudim</small>
                     <p data-identifier="food-price">R$ 7,90</p>
-                    <ion-icon class="checkmarkOff" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="display-none" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
             <div class="food-option" onclick="selectFood(this, '.desserts')" data-identifier="food-option">
@@ -140,17 +140,54 @@
                     <strong data-identifier="food-title">Pudim<br></strong>
                     <small>Apenas pudim</small>
                     <p data-identifier="food-price">R$ 7,90</p>
-                    <ion-icon class="checkmarkOff" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="display-none" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <button class="order-button">
+        <button class="order-button-disabled">
             <p>Selecione os 3 itens <br> para fechar o pedido</p>
         </button>
+        <button class="order-button-enabled display-none" onclick="reviewOrder()">
+            <p>Fechar pedido</p>
+        </button>
     </footer>
+
+    <div class="review-screen-container display-none">
+        <div class="review-screen">
+            <p>Confirme seu pedido</p>
+
+            <div class="dish">
+                <p>Frango Yin Yang</p>
+                <p>14,90</p>
+            </div>
+
+            <div class="drink">
+                <p>Frango Yin Yang</p>
+                <p>14,90</p>
+            </div>
+
+            <div class="dessert">
+                <p>Frango Yin Yang</p>
+                <p>14,90</p>
+            </div>
+
+            <div>
+                <p>TOTAL</p>
+                <p>R$ 27,70</p>
+            </div>
+
+            <button>
+                <p>Tudo certo, pode pedir!</p>
+            </button>
+            <br>
+            <button>
+                <p>Cancelar</p>
+            </button>
+        </div>
+    </div>
 
     <script src="scripts.js"></script>
 

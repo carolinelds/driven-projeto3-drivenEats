@@ -7,7 +7,7 @@ function selectFood(item, ident){
     if (previousSelected !== null) {
         previousSelected.classList.remove("selected");
         const checkOn = previousSelected.querySelector("ion-icon");
-        checkOn.classList.add("checkmarkOff");
+        checkOn.classList.add("display-none");
     }
 
     // add green border to selected item
@@ -15,7 +15,7 @@ function selectFood(item, ident){
 
     // add checkmark to selected item
     const check = item.querySelector("ion-icon");
-    check.classList.toggle("checkmarkOff");
+    check.classList.toggle("display-none");
 
     checkOrderButton();
 }
@@ -30,11 +30,22 @@ function checkOrderButton(){
     // return true or false whether there is one food selected in each category
     let status = (dishSelected !== null) && (drinkSelected !== null) && (dessertSelected !== null);
 
-    // if true, enable order button (green version)
+    // if true, disable old order button (grey) and enable newer one (green)
     if (status) {
-        const orderButton = document.querySelector(".order-button");
+        const disabled = document.querySelector(".order-button-disabled");
+        disabled.classList.add("display-none");
 
-        orderButton.classList.add("enabled");
-        orderButton.innerHTML = "Fechar pedido";
+        const enabled = document.querySelector(".order-button-enabled")
+        enabled.classList.remove("display-none");
     }
+}
+
+function reviewOrder() {
+
+    const reviewScreen = document.querySelector(".review-screen-container");
+    reviewScreen.classList.remove("display-none");
+    reviewScreen.classList.add("display-flex");
+
+
+
 }
