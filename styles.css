@@ -72,16 +72,17 @@ main>p:first-of-type {
     display: flex;
     width: 100%;
     overflow-x: scroll;
+    
 }
 
-.container-options > div {
+.food-option {
     background-color: white;
     height: 100%;
     min-width: 172px;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     margin-right: 16px;
- 
+    position: relative;
 }
 
 .container-options > div div {
@@ -148,3 +149,20 @@ footer button {
     line-height: 23px;
     letter-spacing: 0.018em;
 }
+
+.selected {
+    box-shadow: inset 0px 0px 0px 5px #32B72F;
+}
+
+.checkmarkOff {
+    display: none;
+}
+
+ion-icon {
+    color: #32B72F;
+    font-size: 24px;
+    position: absolute;
+    bottom: 11px;
+    right: 12px;
+}
+
