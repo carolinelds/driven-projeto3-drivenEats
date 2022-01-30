@@ -90,4 +90,10 @@ function fillInReviewData(reviewCategory, category) {
     return reviewPrice.innerHTML;
 }
 
+function cancel() {
+    const reviewScreen = document.querySelector(".review-screen-container");
+    reviewScreen.classList.remove("display-flex");
+    reviewScreen.classList.add("display-none");
+}
+
  
