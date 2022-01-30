@@ -1,4 +1,19 @@
+let dish = "";
+let drink = "";
+let dessert = "";
+
+
 function selectFood(item, ident){
+
+    if (ident === ".dishes"){
+        dish = item;
+    }
+    else if (ident === ".drinks"){
+        drink = item;
+    }
+    else if (ident === ".desserts"){
+        dessert = item;
+    }
 
     //identify previous selected item of the same category
     const previousSelected = document.querySelector(ident + " .selected");
@@ -42,10 +57,37 @@ function checkOrderButton(){
 
 function reviewOrder() {
 
+    // enable review screen
     const reviewScreen = document.querySelector(".review-screen-container");
     reviewScreen.classList.remove("display-none");
     reviewScreen.classList.add("display-flex");
 
+    let priceDish = fillInReviewData(".review-dish", dish);
+    let priceDrink = fillInReviewData(".review-drink", drink);
+    let priceDessert = fillInReviewData(".review-dessert", dessert);
 
+    priceDish = parseFloat(priceDish.replace(",", "."));
+    priceDrink = parseFloat(priceDrink.replace(",", "."));
+    priceDessert = parseFloat(priceDessert.replace(",", "."));
 
+    const totalPrice = document.querySelector(".review-screen span");
+
+    totalPrice.innerHTML = (priceDish + priceDrink + priceDessert).toFixed(2).toString();
+
+    totalPrice.innerHTML = totalPrice.innerHTML.replace(".", ",");
 }
+
+function fillInReviewData(reviewCategory, category) {
+
+    // identify locations of names and prices to review 
+    const reviewName = document.querySelector(reviewCategory + " p:first-of-type");
+    const reviewPrice = document.querySelector(reviewCategory + " p:last-of-type");
+
+    // fill in these locations with the respectives names and prices
+    reviewName.innerHTML = category.querySelector("strong").innerHTML;
+    reviewPrice.innerHTML = category.querySelector("span").innerHTML;
+
+    return reviewPrice.innerHTML;
+}
+
+ 
