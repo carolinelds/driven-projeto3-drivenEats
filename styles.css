@@ -137,7 +137,7 @@ footer {
     justify-content: center;
 }
 
-footer button {
+.order-button {
     background-color: #CBCBCB;
     height: 61px;
     width: 364px;
@@ -148,6 +148,10 @@ footer button {
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 0.018em;
+}
+
+.order-button.enabled {
+    background-color: #32B72F;
 }
 
 .selected {
