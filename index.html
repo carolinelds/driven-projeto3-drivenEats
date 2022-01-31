@@ -155,6 +155,30 @@
                 <p>R$ <span>27,70</span></p>
             </div>
 
+            <!-- Sustainability section -->
+            <p>Gostaria de talheres/canudo de plástico?</p>
+
+            <div class="container-answers-turtle">
+
+                <div class="container-answers">
+                    <div onclick="happyTurtle()">
+                        <input type="checkbox" id="no" name="no">
+                        <label for="no">NÃO</label>
+                    </div>
+
+                    <div onclick="sadTurtle()">
+                        <input type="checkbox" id="yes" name="yes">
+                        <label for="yes">SIM</label>
+                    </div>
+                </div>
+
+                <div class="container-turtle">
+                    <img src="./images/happy_turtle.png" class="display-none" alt="Happy turtle">
+                    <img src="./images/sad_turtle.png" class="display-none" alt="Sad turtle">
+                </div>
+            </div>
+
+            <!-- Final buttons -->
             <button onclick="order()">
                 <p>Tudo certo, pode pedir!</p>
             </button>

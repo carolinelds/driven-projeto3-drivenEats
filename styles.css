@@ -181,7 +181,7 @@ footer {
 
 .review-screen {
     width: 377px;
-    height: 353px;
+    height: auto;
     background-color: #50D074;
     border-radius: 9px;
     display: flex;
@@ -213,7 +213,7 @@ footer {
     margin-bottom: 13px;
 }
 
-.review-screen > div:last-of-type {
+.review-screen > div:nth-of-type(4) {
     font-weight: bold;
 }
 
@@ -240,6 +240,7 @@ footer {
 .review-screen button:last-of-type {
     background-color: inherit;
     border: none;
+    margin-bottom: 15px;
 }
 
 .review-screen button:last-of-type p {
@@ -257,4 +258,48 @@ ion-icon {
     bottom: 11px;
     right: 12px;
 }
+
+
+/* Sustainability section */
+
+.review-screen > p:nth-of-type(2) {
+    font-size: 17px;
+    letter-spacing: 0.03em;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.container-answers-turtle {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-answers {
+    padding-left: 75px;
+    margin-bottom: 10px;
+}
+.container-answers div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.container-answers label {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 35px;
+    letter-spacing: 0.018em;
+    padding-left: 5px;
+}
+
+.review-screen img {
+    height: 70px;
+    width: auto;
+    padding-right: 70px;
+    margin-bottom: 10px;
+}
+
 

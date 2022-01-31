@@ -96,4 +96,29 @@ function cancel() {
     reviewScreen.classList.add("display-none");
 }
 
- 
+function happyTurtle() {
+    if (document.getElementById("yes").checked) {
+		document.getElementById("yes").checked = false;
+	}
+
+    const imageSad = document.querySelector(".review-screen img:last-of-type");
+    imageSad.classList.add("display-none");
+
+    const imageHappy = document.querySelector(".review-screen img:first-of-type");
+    imageHappy.classList.remove("display-none");
+}
+
+function sadTurtle() {
+    if (document.getElementById("no").checked) {
+		document.getElementById("no").checked = false;
+	}
+
+    const imageSad = document.querySelector(".review-screen img:last-of-type");
+    imageSad.classList.remove("display-none");
+
+    const imageHappy = document.querySelector(".review-screen img:first-of-type");
+    imageHappy.classList.add("display-none");
+}
+
+document.getElementById("yes").onchange = sadTurtle;
+document.getElementById("no").onchange = happyTurtle;
