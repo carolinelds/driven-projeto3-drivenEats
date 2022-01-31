@@ -96,6 +96,38 @@ function cancel() {
     reviewScreen.classList.add("display-none");
 }
 
+function order() {
+
+    // get info from the user 
+    const name = prompt("Qual o seu nome?");
+    const address = prompt("E o seu endereço?");
+
+    // get info about final dish, drink, dessert and price
+    const finalDish = document.querySelector(".review-dish p:first-of-type");
+    const finalDrink = document.querySelector(".review-drink p:first-of-type");
+    const finalDessert = document.querySelector(".review-dessert p:first-of-type");
+    const finalPrice = document.querySelector(".review-screen > div:nth-of-type(4) span")
+
+
+    // get info about the plastic utensils option
+    let plasticOption = "";
+    if (document.getElementById("yes").checked) {
+        plasticOption = "Sim";
+    }
+    else {
+        plasticOption = "Não";
+    }
+   
+    // write and format the text to send via WhatsApp
+    let text = `Olá, gostaria de fazer o pedido:\n- Prato: ${finalDish.innerHTML}\n- Bebida: ${finalDrink.innerHTML}\n- Sobremesa: ${finalDessert.innerHTML}\nTotal: R\$ ${finalPrice.innerHTML}\n\nNome: ${name}\nEndereço: ${address}\n\n Gostaria de talheres/canudos de plástico: ${plasticOption}`;
+    text = window.encodeURIComponent(text);
+
+    // send order via WhatsApp
+    let cellNumber = "5555984375147";
+    window.open("https://wa.me/" + cellNumber + "?text=" + text, "_blank");
+
+}
+
 function happyTurtle() {
     if (document.getElementById("yes").checked) {
 		document.getElementById("yes").checked = false;
