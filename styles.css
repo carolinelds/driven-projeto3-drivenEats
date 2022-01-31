@@ -91,6 +91,7 @@ main>p:first-of-type {
 .container-options img {
     width: 144px;
     height: 87px;
+    object-fit: cover;
     border-radius: 4px;
     margin-top: 18px;
     margin-bottom: 6px;

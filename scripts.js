@@ -1,3 +1,4 @@
+// global variables to identify selected food
 let dish = "";
 let drink = "";
 let dessert = "";
@@ -5,6 +6,7 @@ let dessert = "";
 
 function selectFood(item, ident){
 
+    // save current selected item to its global variable
     if (ident === ".dishes"){
         dish = item;
     }
@@ -62,18 +64,21 @@ function reviewOrder() {
     reviewScreen.classList.remove("display-none");
     reviewScreen.classList.add("display-flex");
 
+    // fill in review data in review screen and get item prices
     let priceDish = fillInReviewData(".review-dish", dish);
     let priceDrink = fillInReviewData(".review-drink", drink);
     let priceDessert = fillInReviewData(".review-dessert", dessert);
 
+    // string manipulation
     priceDish = parseFloat(priceDish.replace(",", "."));
     priceDrink = parseFloat(priceDrink.replace(",", "."));
     priceDessert = parseFloat(priceDessert.replace(",", "."));
 
+    // get location of total price on review screen
     const totalPrice = document.querySelector(".review-screen span");
 
+    // calculate total price and fill it in on review screen with comma, not dot
     totalPrice.innerHTML = (priceDish + priceDrink + priceDessert).toFixed(2).toString();
-
     totalPrice.innerHTML = totalPrice.innerHTML.replace(".", ",");
 }
 
@@ -119,7 +124,7 @@ function order() {
     }
    
     // write and format the text to send via WhatsApp
-    let text = `Olá, gostaria de fazer o pedido:\n- Prato: ${finalDish.innerHTML}\n- Bebida: ${finalDrink.innerHTML}\n- Sobremesa: ${finalDessert.innerHTML}\nTotal: R\$ ${finalPrice.innerHTML}\n\nNome: ${name}\nEndereço: ${address}\n\n Gostaria de talheres/canudos de plástico: ${plasticOption}`;
+    let text = `Olá, gostaria de fazer o pedido:\n- Prato: ${finalDish.innerHTML}\n- Bebida: ${finalDrink.innerHTML}\n- Sobremesa: ${finalDessert.innerHTML}\nTotal: R\$ ${finalPrice.innerHTML}\n\nNome: ${name}\nEndereço: ${address}\n\n Gostaria de talheres/canudo de plástico: ${plasticOption}`;
     text = window.encodeURIComponent(text);
 
     // send order via WhatsApp
@@ -128,6 +133,7 @@ function order() {
 
 }
 
+// plastic utensils functions
 function happyTurtle() {
     if (document.getElementById("yes").checked) {
 		document.getElementById("yes").checked = false;
